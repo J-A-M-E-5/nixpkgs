@@ -15097,6 +15097,14 @@ in modules // {
     };
   };
 
+  numpy_1_12 = self.buildNumpyPackage rec {
+    version = "1.12.0";
+    src = pkgs.fetchurl {
+      url = "mirror://pypi/n/numpy/numpy-${version}.zip";
+      sha256 = "ff320ecfe41c6581c8981dce892fe6d7e69806459a899e294e4bf8229737b154";
+    };
+  };
+
   numpydoc = buildPythonPackage rec {
     name = "numpydoc-${version}";
     version = "0.5";
